@@ -1,95 +1,33 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+import Link from "next/link";
+import Image from "next/legacy/image";
+import illustration from '../../public/illustration.svg'
+import { myFont } from "@/shared/font"
 export default function Home() {
+  // <a href="https://storyset.com/web">Web illustrations by Storyset</a>
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div style={{ width: '100%', height: 'calc(100vh - 80px)', minHeight: '800px', display: 'flex', alignItems: 'center' }}>
+      <div style={{ width: '50%', height: '100%', paddingLeft: '100px' }}>
+        <div style={{ width: '80%', position: 'relative', top: '50%', transform: 'translateY(-50%)' }}>
+          <p style={{ fontSize: '46px', marginTop: '0px', marginBottom: '0px' }} className={myFont.className}>Developpeur Web & Mobile</p>
+          <p style={{ fontSize: '46px', marginTop: '0px'}} className={myFont.className}>Integrateur</p>
+          <p style={{ fontSize: '24px' }}>Bienvenue dans mon portfolio en tant que développeur web ! Découvrez ici mon parcours, mes compétences et mes réalisations dans le domaine du développement web.</p>
+          <p style={{ fontSize: '24px' }}>Je suis un développeur web passionné
+            Spécialiser dans la création du site web moderne et fonctionnel.
+            Passionné par la création d'interfaces utilisatrices attrayantes et conviviales</p>
+          <div style={{ marginTop: '48px' }}>
+            <button style={{ border: '1px solid #00ADB5', background: 'transparent', color: '#00ADB5', fontSize: '18px', borderRadius: '5px', padding: '10px 16px', cursor: 'pointer' }}><Link style={{ color: 'inherit', textDecoration: 'none' }} href="/contact">Me contacter</Link></button>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
+      <div style={{ width: '50%', height: '100%' }}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={illustration}
+          width={800}
+          height={800}
+          layout="responsive"
+          alt=""
         />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
