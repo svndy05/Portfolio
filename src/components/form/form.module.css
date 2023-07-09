@@ -1,0 +1,69 @@
+.form {
+    color: #222831;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .form > div {
+    width: 90%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .title {
+    width: auto;
+    margin-bottom: 50px;
+  }
+  .inputGroup{
+    display: flex;
+    flex-direction: column;
+    width:auto;
+  }
+  .inputGroup > label{
+    margin-bottom:12px;
+    color:grey;
+  }
+  .inputGroup > input{
+    outline-color: #FF8551;
+    background: transparent;
+    border: 2px solid rgba(57, 62, 70, 0.2);
+    border-radius: 5px;
+    padding: 10px 12px;
+    color: #222831;
+    font-size: 18px;
+  }
+  .inputGroup > textarea{
+    outline-color: #FF8551;
+    height: 200px;
+    background: transparent;
+    border: 2px solid rgba(57, 62, 70, 0.2);
+    border-radius: 5px;
+    padding: 10px 12px;
+    color: #222831;
+    font-size: 18px;
+  }
+  .inputGroup:nth-child(n+3){
+    margin-top:32px;
+}
+.buttonGroup{
+    margin-top:30px;
+}
+.buttonGroup > button{
+    margin-top: 2rem;
+    border: 3px solid #FF8551;
+    background: transparent;
+    color: #FF8551;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+@media screen and (max-width:890px){
+    .inputGroup > input  , .inputGroup > textarea{
+        border: 2px solid  rgba(250,250,250,0.6);
+    }
+}

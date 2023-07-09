@@ -2,9 +2,9 @@
 import Link from "next/link"
 import styled from "styled-components"
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { myFont } from '@/shared/font';
-
+import styles from './menu.module.css'
 interface StyledLinkType {
     selected?:boolean
 }
@@ -16,7 +16,7 @@ export default function Menu(){
     const pathname = usePathname();  
     const [currentPage,setCurrentPage] = useState('acceuil')
     return(
-        <ul style={{margin:'0px',display:'flex',listStyle:'none',paddingLeft:'0px',width:'100%',justifyContent:'space-around',alignItems:'center',fontSize:'1.3rem',height:'inherit'}} className={myFont.className}>
+        <ul className={myFont.className + ' ' + styles.menu}>
           <li><Link onClick={()=> setCurrentPage('acceuil')} href="/" style={{textDecoration:'none'}}><StyledLink selected={pathname === '/' ? true :false}>Acceuil</StyledLink></Link></li>
           <li><Link onClick={()=> setCurrentPage('realisation') } href="/realisation" style={{textDecoration:'none'}}><StyledLink selected={pathname.split('/')[1] === 'realisation' ? true :false}>Realisation</StyledLink></Link></li>
           <li> <Link onClick={()=> setCurrentPage('contact') } href="/contact" style={{textDecoration:'none'}}><StyledLink selected={ pathname.split('/')[1] === 'contact'? true: false}>Contact</StyledLink></Link></li>

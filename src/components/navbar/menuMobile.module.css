@@ -1,0 +1,36 @@
+.menuMobile{
+    height:80px;
+    width:100%;
+    position: absolute;
+}
+.menuMobile > div:first-child{
+    width:40px;
+    height:100%;
+    position: absolute;
+    right: 5%;
+}
+.burger{
+    position: relative;
+    bottom: -22px;
+}
+.dropdown > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height:inherit;
+    padding: 0;
+    margin:0;
+    font-size: 24px;
+    position: relative;
+}
+.dropdown > ul > li{
+    height: 36px;
+    text-align: left;
+}
+@media screen and (min-width:815px) {
+    .menuMobile{
+        display: none;
+    }
+}

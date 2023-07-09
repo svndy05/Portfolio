@@ -1,13 +1,13 @@
 import Menu from "./menu";
-import Link from "next/link";
 import { ReactElement } from "react";
+import styles from './navbar.module.css'
+import MenuMobile from "./menuMobile";
 export default function Navbar({animationEnd}:{animationEnd:boolean}):ReactElement {
     return (
-        <nav style={{ width: '100%', height: '80px', display: 'flex',opacity:animationEnd? '1': '0',transition:'opacity 0.5s linear', position: 'absolute', zIndex: '2' }}>
-            <div style={{ width: '60%', display: 'flex', alignItems: 'center', fontSize: '24px' }}>
-            </div>
-            <div style={{display:'flex',width:'40%',justifyContent:"flex-end"}}>
-                <Menu />
+        <nav className={styles.navbar} style={{opacity:animationEnd? '1': '0'}}>
+            <div>
+                <Menu/>
+                <MenuMobile/>
             </div>
         </nav>
     )

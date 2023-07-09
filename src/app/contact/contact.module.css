@@ -1,0 +1,37 @@
+.page{
+    display: flex;
+    height:100%;
+    overflow: hidden;
+}
+.page >div:first-of-type{
+    width:40%;
+    height:100%;
+    position:relative;
+
+}
+.page > div:last-of-type{
+    width:60%;
+    height:100%;
+    position:relative;
+}
+@media screen and (max-width:1116px){
+    .page >div:first-of-type{
+        width:50%;
+    }
+    .page >div:last-of-type{
+        width:50%;
+    }
+}
+@media screen and (max-width:890px) {
+    .page >div:first-of-type{
+        width:100%;
+    }
+    .page >div:last-of-type{
+        width:100%;
+        position: absolute;
+    }
+    .image{
+        filter: brightness(0.3) ;
+    }
+    
+}

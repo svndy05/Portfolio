@@ -1,0 +1,23 @@
+.menu{
+    margin:0;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.3rem;
+    height:inherit;   
+}
+@media screen and (max-width:814px) {
+    .menu{
+        display:none;
+    }
+}
+
+@media screen and (min-width:2000px) {
+    .menu{
+        font-size:1.1vw; 
+    }
+}
+

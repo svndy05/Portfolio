@@ -1,0 +1,84 @@
+.container{
+width:100%;
+height:calc(100vh - 80px);
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+.container > p:first-of-type{
+    font-size: 2.5vw;
+    text-align: center;
+    margin:0;
+}
+.container > p:last-of-type{
+    margin-top: 32px;
+    width:78%;
+    font-size: 1.5vw;
+    color:grey;
+    text-align: center;
+}
+.container > button{
+    margin-top: 2rem;
+    border:3px solid #FF8551;
+    background: transparent;
+    color: #FF8551;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px 16px;
+    cursor: pointer;
+
+}
+.container > svg:first-of-type{
+position:fixed;
+top:10%;
+left:10%;
+width:200px;
+z-index: -1;
+}
+.container > svg:nth-of-type(2){
+    position: fixed;
+    top:25%;
+    left:50%;
+    width:600px;
+    z-index: -1;
+}
+.container > svg:last-of-type{
+    position: fixed;
+    top:20%;
+    left:40%;
+    width:400px;
+    z-index: -1;
+}
+@media screen and (max-width:480px){
+    .container{
+        top: -40px;
+    }
+    .container > p:first-of-type{
+        font-size: 6vw;
+        text-align: left;
+        width: 90%;
+    }
+    .container > p:last-of-type{
+        font-size:4vw;
+        width:90%;
+        text-align: left;
+    }
+    .container > button{
+        font-size: 4vw;   
+       }
+}
+@media screen  and (min-width:480px) and (max-width:1200px){
+    .container > p:first-of-type{
+        font-size: 29px;
+        width: 94%;
+    }
+    .container > p:last-of-type{
+        font-size:18px;
+    }
+    .container > button{
+     font-size: 18px;   
+    }
+}
